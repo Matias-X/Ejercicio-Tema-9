@@ -1,0 +1,74 @@
+public class Main {
+    public static void main (String[] args) {
+        Cliente obj1 = new Cliente();
+        obj1.setEdad(25);
+        System.out.println("La edad es: "+obj1.getEdad());
+        
+        Cliente obj2 = new Cliente();
+        obj2.setNombre("Matias");
+        System.out.println("Tu nombre es: "+obj2.getNombre());
+        
+        Cliente obj3 = new Cliente();
+        obj3.setTelefono(123123);
+        System.out.println("Tu telefono es: "+obj3.getTelefono());
+        
+        Cliente obj4 = new Cliente();
+        obj4.setCredito(200000);
+        System.out.println("Tu credito es de: "+obj4.getCredito());
+        
+    }
+}
+
+
+class Persona {
+    private int edad;
+    private String nombre;
+    private int telefono;
+    
+    public void setEdad (int edad) {
+        this.edad = edad;
+    }
+    
+    public int getEdad() {
+        return edad;
+    } 
+    
+    public void setNombre (String nombre) {
+        this.nombre = nombre;
+    }
+    
+    public String getNombre() {
+        return nombre;
+    }
+    
+    public void setTelefono(int telefono) {
+        this.telefono = telefono
+    }
+    
+    public int getTelefono() {
+        return telefono;
+    }
+}
+
+class Cliente extends Persona {
+    
+    private int credito;
+    
+    
+    Cliente(int edad, String nombre, int telefono, int credito) {
+        super(edad, nombre, telefono);
+        this.credito = credito;
+    }
+    
+    
+}
+
+class Trabajador extends Persona {
+
+    private int salario;
+    
+    Salario(int edad, String nombre, int telefono, int salario) {
+        super(edad, nombre, telefono);
+        this.salario = salario;
+    }
+}
